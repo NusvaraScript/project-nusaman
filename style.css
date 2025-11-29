@@ -1,0 +1,60 @@
+/* modify existing properties */
+body {
+    background-color: #E0E1DD;
+}
+/* utilities */
+.reverse {
+    flex-direction: row-reverse;
+}
+.w-50-gap {
+    /* Menggunakan calc untuk memastikan dua elemen muat dan menyisakan ruang untuk gap */
+    width: calc(50% - 4px) !important; /* Asumsi g-2 menciptakan gap 8px (sekitar 4px per sisi) */
+}
+
+/* Tambahan: Pastikan div-div ini berperilaku seperti Flex Item */
+.onebytwo-flex > div {
+    margin-bottom: 8px; /* Tambahkan margin vertikal jika g-2 tidak bekerja pada semua browser */
+}
+/* grid */
+.twobytwo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}
+.threebyone-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    gap: 8px;
+}
+
+.onebytwo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 8px;
+}   
+.onebytwo-grid .div1 {
+    grid-column: span 2 / span 2;
+}
+.onebytwo-grid .div2 {
+    grid-row-start: 2;
+}
+.onebytwo-grid .div3 {
+    grid-row-start: 2;
+}
+        
+/* responsive: stack .four-grid to 1-column on small screens */
+@media (max-width: 767.98px) {
+    .four-grid {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
+/* responsive helpers for t-section image wrapper */
+.section-img { max-width: 30%; min-width: 120px; }
+@media (max-width: 767.98px) {
+    .section-img { max-width: 100% !important; }
+}
