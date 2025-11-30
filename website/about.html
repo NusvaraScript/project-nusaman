@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loading.css">
     <title>Tentang Kami</title>
 </head>
@@ -23,35 +22,44 @@
 
     <main>
         <t-hero
-            title="Tentang Nusantara Tech Solutions"
-            description="Misi kami adalah memberdayakan UMKM dan bisnis lokal melalui solusi digital yang inovatif dan terjangkau."
+            page="Tentang Kami"
+            title="Pilar Inovasi Digital Nusantara"
+            description="Kami adalah perusahaan konsultan teknologi terdepan yang berdedikasi untuk mendorong transformasi digital, berfokus pada pengembangan solusi strategis untuk meningkatkan daya saing UMKM dan entitas bisnis di Indonesia."
         ></t-hero>
 
         <section class="container my-5">
-            <div class="onebytwo-flex d-flex flex-wrap g-2 justify-content-between">
-                <div class="w-100">
+            <div class="row g-2 d-flex align-items-stretch"> 
+                
+                <div class="col-12">
                     <t-card
-                        biCLass=""
+                        biClass="book-fill"
                         title="Sejarah Singkat"
                         description="Nusantara Tech Solutions didirikan untuk membantu UMKM dan bisnis lokal beralih ke ranah digital melalui layanan pembuatan website dan solusi perangkat lunak yang terjangkau."
+                        cardClass="h-100" 
                     ></t-card>
                 </div>
-                <div class="w-50-gap">
+                
+                <div class="col-12 col-md-6">
                     <t-card
-                        biCLass=""
+                        biClass="eye-fill"
                         title="Visi"
                         description="Menjadi perusahaan teknologi yang memajukan usaha lokal di seluruh Nusantara melalui solusi digital."
+                        cardClass="h-100" 
                     ></t-card>
                 </div>
-                <div class="w-50-gap">
+                
+                <div class="col-12 col-md-6">
                     <t-card
-                        biCLass=""
+                        biClass="flag-fill"
                         title="Misi"
                         description="
-                            1. Menyediakan layanan pembuatan website & aplikasi berkualitas.<br/>
-                            2. Mendukung digitalisasi usaha kecil dan menengah.<br/>
-                            3. Memberikan solusi yang mudah diterapkan dan terjangkau.<br/>
+                            <ul class='list-unstyled mb-0'>
+                                <li><i class='bi bi-check-lg text-success me-2'></i>Menyediakan layanan pembuatan website & aplikasi berkualitas.</li>
+                                <li><i class='bi bi-check-lg text-success me-2'></i>Mendukung digitalisasi usaha kecil dan menengah.</li>
+                                <li><i class='bi bi-check-lg text-success me-2'></i>Memberikan solusi yang mudah diterapkan dan terjangkau.</li>
+                            </ul>
                         "
+                        cardClass="h-100"
                     ></t-card>
                 </div>
             </div>

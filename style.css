@@ -3,46 +3,20 @@ body {
     background-color: #E0E1DD;
 }
 /* utilities */
+.btn-custom-primary {
+  background-color: #264b74;
+  border-color: #264b74; /* Tambahkan border agar konsisten */
+}
+.btn-custom-primary:hover {
+  background-color: #1c3652; /* Warna lebih gelap saat hover */
+  border-color: #1c3652;
+}
 .reverse {
     flex-direction: row-reverse;
 }
 .w-50-gap {
     /* Menggunakan calc untuk memastikan dua elemen muat dan menyisakan ruang untuk gap */
     width: calc(50% - 4px) !important; /* Asumsi g-2 menciptakan gap 8px (sekitar 4px per sisi) */
-}
-
-/* Tambahan: Pastikan div-div ini berperilaku seperti Flex Item */
-.onebytwo-flex > div {
-    margin-bottom: 8px; /* Tambahkan margin vertikal jika g-2 tidak bekerja pada semua browser */
-}
-/* grid */
-.twobytwo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-}
-.threebyone-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(1, 1fr);
-    gap: 8px;
-}
-
-.onebytwo-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    gap: 8px;
-}   
-.onebytwo-grid .div1 {
-    grid-column: span 2 / span 2;
-}
-.onebytwo-grid .div2 {
-    grid-row-start: 2;
-}
-.onebytwo-grid .div3 {
-    grid-row-start: 2;
 }
         
 /* responsive: stack .four-grid to 1-column on small screens */

@@ -11,13 +11,86 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loading.css">
     <title>Projek</title>
 </head>
 <body>
-
+    <t-loading></t-loading>
+    <t-nav active="class-projek"></t-nav>
     
+    <main>
+        <t-hero
+            page="Projek Kami"
+            title="Rekam Jejak Solusi Digital yang Terbukti"
+            description="Lihatlah bagaimana Nusantara Tech Solutions telah menjadi mitra strategis dalam mengatasi tantangan unik klien kami. Portofolio ini adalah bukti komitmen kami untuk menghadirkan solusi custom yang inovatif dan sesuai dengan tuntutan industri yang dinamis."
+        ></t-hero>
+
+        <section class="container my-5">
+            <h2 class="text-center mb-5 display-6 fw-bold">Projek Terbaru Kami</h2>
+
+            <div class="row g-3 d-flex align-items-stretch">
+                
+                <div class="col-12 col-md-6">
+                    <t-card
+                        biClass="cart-fill"
+                        title="Batik Nusantara (E-commerce)"
+                        description="Pengembangan platform toko online lengkap dengan fitur keranjang, checkout, dan integrasi kurir JNE/Tiki."
+                        cardClass="h-100"
+                    ></t-card>
+                </div>
+                
+                <div class="col-12 col-md-6">
+                    <t-card
+                        biClass="building"
+                        title="Sistem HRD Klien A (Internal App)"
+                        description="Aplikasi web kustom untuk manajemen cuti karyawan, penggajian, dan rekam jejak pelatihan berbasis cloud."
+                        cardClass="h-100"
+                    ></t-card>
+                </div>
+                
+                <div class="col-12 col-md-6">
+                    <t-card
+                        biClass="megaphone"
+                        title="Startup Edukasi (Landing Page)"
+                        description="Pembuatan landing page konversi tinggi untuk peluncuran produk baru, berfokus pada kecepatan dan SEO."
+                        cardClass="h-100"
+                    ></t-card>
+                </div>
+                
+                <div class="col-12 col-md-6">
+                    <t-card
+                        biClass="phone"
+                        title="Aplikasi Layanan Publik (Mobile)"
+                        description="Aplikasi mobile untuk pelaporan dan layanan publik, tersedia di Android dan iOS."
+                        cardClass="h-100"
+                    ></t-card>
+                </div>
+                
+                </div>
+        </section>
+
+        <t-section
+            title="Studi Kasus: Peningkatan Konversi Hingga 60%"
+            description="Kami merancang ulang total website sebuah perusahaan FMCG dari nol, fokus pada User Experience (UX) yang lebih intuitif dan kecepatan loading. Melalui A/B testing dan optimalisasi alur pembelian, kami berhasil menaikkan tingkat konversi pengunjung menjadi pembeli hingga 60% dalam waktu tiga bulan."
+            img="../foto/data-analytics.svg" 
+            link="case-study-fmcg.html"
+            linkText="Baca Studi Kasus Lengkap"
+        ></t-section>
+        
+        <t-section
+            reverse="reverse"
+            title="Sistem Manajemen Karyawan Kustom (HRIS)"
+            description="Sebuah perusahaan logistik besar membutuhkan sistem manajemen karyawan terintegrasi yang mampu menangani ratusan data harian. Kami mengembangkan Human Resource Information System (HRIS) kustom berbasis Laravel yang mengotomatisasi proses cuti, penggajian, dan laporan kinerja, mengurangi beban kerja administrasi hingga 80%."
+            img="../foto/business-process.svg" 
+            link="case-study-hris.html"
+            linkText="Lihat Detail Implementasi"
+        ></t-section>
+
+        <t-cta></t-cta>
+    </main>
+    
+    <t-footer></t-footer>
+
     <script src="../loading.js"></script>
     <script src="../component.js"></script>
 </body>

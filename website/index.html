@@ -12,7 +12,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../style.css">
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="../loading.css">
     <title>Beranda</title>
 </head>
@@ -22,117 +21,172 @@
     <t-nav active="class-beranda"></t-nav>
 
     <main>
-        <t-hero
-            title="Wujudkan Website Impian Anda, Mulai Hari Ini."
+        <t-hero page="Beranda" title="Wujudkan Website Impian Anda, Mulai Hari Ini."
             description="Kami adalah mitra tepercaya Anda, fokus membangun platform digital yang tidak hanya tampil memukau, tetapi juga benar-benar menghasilkan."
             kode="
-                <a href='#' class='btn text-white me-2' style='background-color: #264b74ff'>Konsultasi Sekarang</a>
-                <a href='#' class='btn btn-outline-light'>Lihat Portofolio Kami</a>
+                <a href='#form-pemesanan' class='btn btn-custom-primary text-white me-2'>Konsultasi Sekarang <i class='ms-1 bi bi-send-fill'></i></a>
+                <a href='#' class='btn btn-outline-light'>Lihat Portofolio Kami <i class='ms-1 bi bi-folder-fill'></i></a>
             "
-        ></t-hero>
+        ></t-hero>  
 
-        <section class="container">
-            <div>
-                <h2 class="text-center my-4"><b>Form Pemesanan</b></h2>
-            </div>
-            <div>
-                <form class="p-4 border rounded shadow-lg bg-white" style="background-color: gray;">
-                    <div class="mb-3">
-                        <label for="nama">Nama:</label>
-                        <input type="text" placeholder="Nama" id="nama" class="form-control">
+        <section class="my-5 py-5" id="form-pemesanan">
+            <div class="container-fluid">
+                <div class="row g-0 justify-content-center rounded overflow-hidden">
+                    
+                    <div class="col-12 col-lg-5 p-4 p-md-5 bg-white">
+                        <h2 class="mb-4 display-6 fw-bold text-dark">Konsultasi Proyek Baru</h2>
+                        <p class="text-muted mb-4">Tim kami siap membantu Anda menyusun arsitektur digital yang paling tepat untuk bisnis Anda.</p>
+                        
+                        <form>
+                            <div class="mb-3">
+                                <label for="nama" class="form-label">Nama Lengkap:</label>
+                                <input type="text" placeholder="Nama Anda" id="nama" class="form-control form-control-lg">
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">E-mail Bisnis:</label>
+                                <input type="email" placeholder="contoh@bisnis.com" id="email" class="form-control form-control-lg">
+                            </div>
+                            <div class="mb-3">
+                                <label for="telepon" class="form-label">No Telepon:</label>
+                                <input type="tel" placeholder="08123456789" id="telepon" class="form-control form-control-lg">
+                            </div>
+                            <div class="mb-4">
+                                <label for="pesan" class="form-label">Jelaskan Kebutuhan Anda:</label>
+                                <textarea placeholder="Contoh: Kami butuh website toko online dengan fitur..." id="pesan" class="form-control" rows="4"></textarea>
+                            </div>
+                            <div class="form-check mb-4">
+                                <input class="form-check-input" type="checkbox" value="" id="checkDisclaimer" required>
+                                <label class="form-check-label text-muted" for="checkDisclaimer" style="font-size: 0.9rem;">
+                                    Saya menyetujui syarat & ketentuan layanan konsultasi.
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-custom-primary text-white btn-lg w-100">Kirim Permintaan Konsultasi</button>
+                        </form>
                     </div>
-                    <div class="mb-3">
-                        <label for="email">E-mail:</label>
-                        <input type="email" placeholder="E-mail" id="email" class="form-control">
+
+                    <div class="col-12 col-lg-5 d-none d-lg-block p-5 d-flex flex-column justify-content-center" 
+                         style="background-color: #29384D; color: #E0E0E0;">
+                        <i class="bi bi-rocket-takeoff-fill display-1 mb-4 text-info"></i>
+                        <h2 class="display-5 fw-bold mb-3">Tingkatkan Performa Bisnis Anda!</h2>
+                        <p class="lead">
+                            Dapatkan blueprint solusi digital yang disesuaikan dengan tujuan bisnis Anda.
+                            Wujudkan ide besar Anda dengan tim developer yang berpengalaman di bidangnya.
+                        </p>
+                        <ul class="list-unstyled mt-4">
+                            <li><i class="bi bi-check-circle-fill me-2 text-info"></i> Desain Custom</li>
+                            <li><i class="bi bi-check-circle-fill me-2 text-info"></i> Kode Bersih & Efisien</li>
+                            <li><i class="bi bi-check-circle-fill me-2 text-info"></i> Konsultasi Gratis</li>
+                        </ul>
                     </div>
-                    <div class="mb-3">
-                        <label for="telepon">No Telepon:</label>
-                        <input type="number" placeholder="No Telepon" id="telepon" class="form-control">
-                    </div>
-                    <div class="mb-3">
-                        <label for="pesan">Pesan:</label>
-                        <textarea type="text" placeholder="Pesan" id="pesan" class="form-control"></textarea>
-                    </div>
-                    <button type="button" class="btn text-white" style="background-color: #264b74ff">Kirim</button>
-                </form>
+                </div>
             </div>
         </section>
 
-        <t-section
-            reverse="reverse"
-            title="Kenapa Memilih Kami?"
+        <t-section reverse="reverse" title="Kenapa Memilih Kami?"
             description="Kami mengutamakan kualitas, kejujuran, dan kepercayaan. Setiap produk kami dibuat dengan cinta dan komitmen tinggi untuk kepuasan pelanggan. Dukungan Anda adalah semangat kami untuk terus berkembang."
-            link="#"
-            linkText="Pelajari Lebih Lanjut"
-            img="../foto/support.svg"
-        ></t-section>
+            link="#" linkText="Pelajari Lebih Lanjut" img="../foto/support.svg"></t-section>
 
-        <section class="container my-5">
-            <div class="twobytwo-grid">
-                <div class="div1">
-                    <t-card
-                        biClass=""
-                        title="Migrate your member data"
-                        description="We'll migrate your data and memberships from other CRMs, membership software, or billing tools for free."
-                    ></t-card>
-                </div>
-                <div class="div2">
-                    <t-card
-                        biClass=""
-                        title="Migrate your member data"
-                        description="We'll migrate your data and memberships from other CRMs, membership software, or billing tools for free."
-                    ></t-card>
-                </div>
-                <div class="div3">
-                    <t-card
-                        biClass=""
-                        title="Migrate your member data"
-                        description="We'll migrate your data and memberships from other CRMs, membership software, or billing tools for free."
-                    ></t-card>
-                </div>
-                <div class="div4">
-                    <t-card
-                        biClass=""
-                        title="Migrate your member data"
-                        description="We'll migrate your data and memberships from other CRMs, membership software, or billing tools for free."
-                    ></t-card>
+        <t-feature-list title="Keunggulan Utama Kami">
+            <div class="col-12 col-md-4 text-center">
+                <i class="bi bi-shield-lock fs-1 text-primary mb-3"></i>
+                <h3 class="fs-4 fw-bold">Keamanan Data Tinggi</h3>
+                <p class="text-muted">Kami menjamin data Anda aman dengan enkripsi standar industri.</p>
+            </div>
+
+            <div class="col-12 col-md-4 text-center">
+                <i class="bi bi-bar-chart-line fs-1 text-primary mb-3"></i>
+                <h3 class="fs-4 fw-bold">Skalabilitas Terbaik</h3>
+                <p class="text-muted">Arsitektur sistem kami siap menampung pertumbuhan traffic dan data Anda.</p>
+            </div>
+
+            <div class="col-12 col-md-4 text-center">
+                <i class="bi bi-clock-history fs-1 text-primary mb-3"></i>
+                <h3 class="fs-4 fw-bold">Dukungan 24/7</h3>
+                <p class="text-muted">Tim kami siap membantu Anda kapan saja tanpa jeda waktu.</p>
+            </div>
+        </t-feature-list>
+
+        <section class="my-5">
+            <div class="container">
+                <div class="row g-3 align-items-stretch">
+
+                    <div class="col-12 col-md-6">
+                        <t-card biClass="arrow-down-up" title="Migrasi Data Anggota"
+                            description="Kami akan memigrasikan data dan keanggotaan Anda dari CRM lain, software keanggotaan, atau alat penagihan secara gratis."></t-card>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <t-card biClass="credit-card" title="Otomatisasi Pembayaran"
+                            description="Integrasikan sistem pembayaran yang aman dan otomatisasi penagihan bulanan untuk mengurangi beban administrasi."></t-card>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <t-card biClass="person-check" title="Manajemen Keanggotaan Terpadu"
+                            description="Kelola profil anggota, tingkat akses, dan status keanggotaan dari satu dasbor yang intuitif."></t-card>
+                    </div>
+
+                    <div class="col-12 col-md-6">
+                        <t-card biClass="shield-lock" title="Keamanan Data Premium"
+                            description="Data anggota Anda dijamin aman dengan enkripsi tingkat lanjut dan kepatuhan terhadap standar privasi global."></t-card>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <t-section
-            title="Kenapa Memilih Kami?"
-            description="Kami mengutamakan kualitas, kejujuran, dan kepercayaan. Setiap produk kami dibuat dengan cinta dan komitmen tinggi untuk kepuasan pelanggan. Dukungan Anda adalah semangat kami untuk terus berkembang."
-            link="#"
-            linkText="Pelajari Lebih Lanjut"
-            img="../foto/support.svg"
-        ></t-section>
+        <t-stats-counter>
+            <div class="col-6 col-md-3">
+                <h2 class="display-4 fw-bold text-primary">150+</h2>
+                <p class="lead text-muted">Proyek Selesai</p>
+            </div>
 
-        <section class="container my-5">
-            <div class="threebyone-grid">
-                <div class="div1">
-                    <t-card
-                        biClass=""
-                        title="Migrate your member data"
-                        description="We'll migrate your data and memberships from other CRMs, membership software, or billing tools for free."
-                    ></t-card>
-                </div>
-                <div class="div2">
-                    <t-card
-                        biClass=""
-                        title="Migrate your member data"
-                        description="We'll migrate your data and memberships from other CRMs, membership software, or billing tools for free."
-                    ></t-card>
-                </div>
-                <div class="div3">
-                    <t-card
-                        biClass=""
-                        title="Migrate your member data"
-                        description="We'll migrate your data and memberships from other CRMs, membership software, or billing tools for free."
-                    ></t-card>
+            <div class="col-6 col-md-3">
+                <h2 class="display-4 fw-bold text-primary">8 Tahun</h2>
+                <p class="lead text-muted">Pengalaman Industri</p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <h2 class="display-4 fw-bold text-primary">98%</h2>
+                <p class="lead text-muted">Kepuasan Klien</p>
+            </div>
+
+            <div class="col-6 col-md-3">
+                <h2 class="display-4 fw-bold text-primary">50+</h2>
+                <p class="lead text-muted">Mitra UMKM</p>
+            </div>
+        </t-stats-counter>
+
+        <t-section title="Kompetensi Kami"
+            description="Kami menjunjung tinggi Kualitas, Integritas, dan Keandalan di setiap proyek. Tim kami terdiri dari developer yang mahir dalam tech stack modern, memastikan produk Anda berperforma tinggi, bug-free, dan mudah dirawat (maintainable). Kami mengedepankan transparansi penuh dalam setiap proses pengembangan."
+            link="#" linkText="Pelajari Lebih Lanjut" img="../foto/support.svg"></t-section>
+
+        <section class="my-5">
+            <div class="container">
+                <div class="row g-3 d-flex align-items-stretch">
+
+                    <div class="col-12 col-md-4">
+                        <t-card biClass="database-fill-down" title="Migrasi Data Anggota"
+                            description="Kami akan memigrasikan data dan keanggotaan Anda dari CRM lain, software keanggotaan, atau alat penagihan secara gratis."
+                            cardClass="h-100"></t-card>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <t-card biClass="graph-up" title="Optimalisasi Proses Bisnis"
+                            description="Menganalisis alur kerja Anda untuk mengidentifikasi dan mengotomatisasi area yang dapat meningkatkan efisiensi dan mengurangi biaya operasional."
+                            cardClass="h-100"></t-card>
+                    </div>
+
+                    <div class="col-12 col-md-4">
+                        <t-card biClass="person-circle" title="Dukungan Pelanggan Prioritas"
+                            description="Tim ahli kami siap memberikan dukungan teknis yang responsif dan solusi cepat untuk memastikan bisnis Anda berjalan tanpa hambatan."
+                            cardClass="h-100"></t-card>
+                    </div>
                 </div>
             </div>
         </section>
+
+        <t-section reverse="reverse" title="Filosofi Pelayanan Kami"
+            description="Sebagai perusahaan lokal, kami memahami kebutuhan spesifik bisnis di Nusantara. Kami berkomitmen memberikan solusi berkualitas dunia dengan harga yang terjangkau dan proses yang mudah dipahami. Kami membangun kemitraan jangka panjang, menjadikan kepuasan dan perkembangan bisnis Anda sebagai prioritas utama kami."
+            link="#" linkText="Pelajari Lebih Lanjut" img="../foto/support.svg"></t-section>
 
         <t-cta></t-cta>
     </main>
