@@ -1,8 +1,12 @@
 <?php
-// 1. Sertakan file koneksi database
+// 1. Sertakan file auth dan koneksi database
+require_once 'auth.php';
 include 'koneksi.php';
 
-// 2. Query untuk mengambil semua data pemesanan
+// 2. Check apakah user sudah login
+check_admin_login();
+
+// 3. Query untuk mengambil semua data kontak
 $sql_select = "SELECT id, nama, email, pesan FROM kontak ORDER BY id DESC";
 $result = mysqli_query($koneksi, $sql_select);
 ?>
@@ -48,6 +52,10 @@ $result = mysqli_query($koneksi, $sql_select);
         <nav id="sidebar" class="col-md-3 col-lg-2 d-md-block sidebar">
             <div class="position-sticky pt-3">
                 <h3 class="text-white text-center mb-4">Nusantara Admin</h3>
+                <div class="mb-3 px-3 text-white" style="background-color: rgba(255,255,255,0.1); padding: 10px; border-radius: 5px; font-size: 13px;">
+                    <i class="bi bi-person-circle me-2"></i>
+                    <strong><?php echo htmlspecialchars($_SESSION['admin_username']); ?></strong>
+                </div>
                 <ul class="nav flex-column">
                     <li class="nav-item">
                         <a class="nav-link" href="index.php">
@@ -62,6 +70,11 @@ $result = mysqli_query($koneksi, $sql_select);
                     <li class="nav-item">
                         <a class="nav-link" href="../website/index.html">
                             <i class="bi bi-box-arrow-left me-2"></i> Kembali ke Website
+                        </a>
+                    </li>
+                    <li class="nav-item mt-4 border-top pt-3">
+                        <a class="nav-link text-danger" href="logout.php">
+                            <i class="bi bi-box-arrow-right me-2"></i> Logout
                         </a>
                     </li>
                 </ul>
