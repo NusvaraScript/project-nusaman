@@ -1,5 +1,5 @@
 # Nusantara Tech Solutions — Project Skeleton
-![Demo](https://nusvarascript.github.io/project-nusaman/)
+# <kbd>[**Website Demo**](https://nusvarascript.github.io/project-nusaman/)</kbd>
 
 Isi ini dibuat untuk tugas praktek PHP Native: situs statis + panel admin CRUD layanan.
 
